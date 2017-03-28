@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
-    "broccoli-clean-css": "1.1.0",
+    "broccoli-clean-css": "^1.1.0",
+    "broccoli-sass-source-maps": "^2.0.0",
     "ember-ajax": "^2.4.1",
     "ember-autoserve": "0.0.4",
     "ember-cli": "2.10.0",
@@ -30,7 +31,7 @@
     "ember-cli-jshint": "^2.0.1",
     "ember-cli-qunit": "^3.0.1",
     "ember-cli-release": "^0.2.9",
-    "ember-cli-sass": "6.1.2",
+    "ember-cli-sass": "^6.1.2",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-test-loader": "^1.1.0",
     "ember-cli-uglify": "^1.2.0",
