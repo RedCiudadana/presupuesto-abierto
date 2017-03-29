@@ -25,7 +25,7 @@
         </div>
 
         <ul class="questions__list" id="questions">
-          {{#each model.preguntasRespuestas as |preguntaRespuesta|}}
+          {{#each preguntasRespuestasOrdenadas as |preguntaRespuesta|}}
             <li
               class="list__item"
               id="{{preguntaRespuesta.id}}"
