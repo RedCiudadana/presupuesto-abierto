@@ -19,33 +19,40 @@
       </div>
     </div>
 
-    {{#each model as |audiencia|}}
-      {{#link-to 'audiencia' audiencia.id}}
-        audiencia: {{audiencia.nombre}}
-      {{/link-to}}
-      <br />
-    {{/each}}
-
-    <div class="preview--closed-videos hide">
+    <div class="preview--closed-videos">
       <div class="preview__floating-header">
         <i class="header__icon icon icon-play"></i>
-        <h2 class="header__title">Audiencias ya acontecidas</h2>
+        <h2 class="header__title">Audiencias públicas</h2>
       </div>
 
       <div class="preview__list-wrapper">
         <ul class="preview__list">
+          {{#each model as |audiencia|}}
+            <li class="list__video">
+              {{#if audiencia.thumbMedium}}
+                {{#link-to 'audiencia' audiencia.id class="video__link"}}
+                  <img class="video__thumbnail" src="{{audiencia.thumbMedium}}">
+                {{/link-to}}
+              {{/if}}
+
+              <h2 class="video__title">
+                {{#link-to 'audiencia' audiencia.id class="title__link"}}
+                  {{audiencia.nombre}}
+                {{/link-to}}
+              </h2>
+            </li>
+          {{/each}}
         </ul>
       </div>
 
-      <div class="preview__show-all">
-        <a href="{% url 'video_list' %}" class="show-all__button">Ver todo</a>
+      <div class="preview__show-all hide">
       </div>
     </div>
 
-    <div class="preview--calendar">
+    <div class="preview--calendar hide">
       <div class="preview__floating-header">
         <i class="header__icon icon icon-calendar"></i>
-        <h2 class="header__title">Audiencias públicas</h2>
+        <h2 class="header__title">Calendario</h2>
       </div>
 
       <table class="calendar-table">
