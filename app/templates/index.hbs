@@ -20,7 +20,10 @@
     </div>
 
     {{#each model as |audiencia|}}
-      audiencia: {{audiencia.nombre}} <br />
+      {{#link-to 'audiencia' audiencia.id}}
+        audiencia: {{audiencia.nombre}}
+      {{/link-to}}
+      <br />
     {{/each}}
 
     <div class="preview--closed-videos hide">
