@@ -58,5 +58,9 @@ export default Ember.Route.extend(AutoReload, {
     this._super(controller, model);
 
     this.startAutoReloading();
+  },
+
+  willTransition() {
+    this.stopAutoReloading();
   }
 });
