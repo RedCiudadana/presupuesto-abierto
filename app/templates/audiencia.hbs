@@ -18,21 +18,58 @@
     <div class="questions-wrapper">
       <div class="questions">
         <div class="questions__header">
-          <h1 class="header__title">Pregunte a los diputados</h1>
-          <p class="header__text">Haga su pregunta o apoye a otras ya realizadas. Serán remitidos a la Oficina de preguntas de mayor clasificación a ser respondidas.</p>
+          <h1 class="header__title">Interpelación</h1>
+          <p class="header__text">
+            Siga y comparta las preguntas hechas por los diputados durante las interpelaciones.
+          </p>
         </div>
 
         <ul class="questions__list" id="questions">
-          <div class="questions__list--empty">
-            <img src="/img/question-hand.svg">
-            <p>No se han hecho preguntas aún. Sé el primero!</p>
-          </div>
-        </ul>
-        <div class="questions__read-more"></div>
+          {{#each model.preguntasRespuestas as |preguntaRespuesta|}}
+            <li
+              class="list__item"
+              id="{{preguntaRespuesta.id}}"
+            >
+              <div class="item__question-block">
 
-        <div class="send-form--closed">
+                <ul class="question-block__share-list">
+                  <li class="share-list__item--facebook ">
+                    <a class="item__link" data-social="facebook" target="_blank" title="Compartilhar pelo Facebook">
+                      <i class="item__icon icon icon-facebook"></i>
+                    </a>
+                  </li>
+
+                  <li class="share-list__item--twitter ">
+                    <a class="item__link" data-social="twitter" target="_blank" title="Compartilhar pelo Twitter">
+                      <i class="item__icon icon icon-twitter"></i>
+                    </a>
+                  </li>
+
+                  <li class="share-list__item--whatsapp ">
+                    <a class="item__link" data-social="whatsapp" target="_blank" title="Compartilhar pelo Whatsapp">
+                      <i class="item__icon icon icon-whatsapp"></i>
+                    </a>
+                  </li>
+
+                  <span class="share-list__close" role="button" title="Cancelar">
+                    <i class="icon icon-times"></i>
+                  </span>
+                </ul>
+
+                <p class="question-block__text">{{preguntaRespuesta.preguntaRespuesta}}</p>
+
+                <div class="question-block__info">
+                  <span class="info__username">{{preguntaRespuesta.author}}</span>
+                </div>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+        {{!-- <div class="questions__read-more"></div> --}}
+
+        {{!-- <div class="send-form--closed">
           <span>Audiencia cerrada para participantes</span>
-        </div>
+        </div> --}}
       </div>
     </div>
   </section>
@@ -41,20 +78,20 @@
     <div class="section-right__top">
       <div class="video">
         <div class="video__iframe-wrapper">
-          {{ember-youtube ytid=model.youtubeId playerVars=(hash autoplay=1)}}
+          {{ember-youtube ytid=model.audiencia.youtubeId playerVars=(hash autoplay=0)}}
         </div>
 
         <div class="video__title">
           <h2 class="title__subheader">
-            <span class="subheader__text">{{ model.nombre }}</span>
+            <span class="subheader__text">{{ model.audiencia.nombre }}</span>
           </h2>
         </div>
       </div>
     </div>
 
-    {{!-- <div class="section-right__bottom">
+    <div class="section-right__bottom">
       <div class="chat">
-        <div class="chat__floating-header">
+        {{!-- <div class="chat__floating-header">
           <i class="header__icon icon icon-comments"></i>
           <h3 class="header__title">Bate-Papo</h3>
         </div>
@@ -96,8 +133,8 @@
             <span>Audiência encerrada para participações.</span>
           </div>
 
-        {% endif %}
+        {% endif %} --}}
       </div>
-    </div> --}}
+    </div>
   </section>
 </main>
