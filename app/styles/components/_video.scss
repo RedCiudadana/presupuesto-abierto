@@ -20,7 +20,7 @@
     }
   }
 
-  .video__iframe {
+  .video__iframe-wrapper iframe {
     @include breakpoint(medium down) {
       height: 100%;
       left: 0;

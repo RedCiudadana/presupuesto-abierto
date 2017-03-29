@@ -41,13 +41,7 @@
     <div class="section-right__top">
       <div class="video">
         <div class="video__iframe-wrapper">
-          <iframe
-            class="video__iframe"
-            src="https://www.youtube.com/embed/{{ object.videoId }}?modestbranding=1&autoplay=1&showinfo=0&rel=0{% if answer_time %}&start={{answer_time}}{% endif %}"
-            frameborder="0"
-            allowfullscreen=""
-          >
-          </iframe>
+          {{ember-youtube ytid=model.youtubeId playerVars=(hash autoplay=1)}}
         </div>
 
         <div class="video__title">
