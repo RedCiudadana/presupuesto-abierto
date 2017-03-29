@@ -1,0 +1,51 @@
+<main class="home">
+  <section class="section-top">
+    <div class="banner">
+      <img class="banner__logo" src="img/logo-audiencias-full.svg">
+      <p class="banner__text">¡Acompañe en vivo y participe enviando preguntas a los diputados!</p>
+    </div>
+  </section>
+
+  <section class="section-bottom">
+    <div class="preview--live-videos hide">
+      <div class="preview__floating-header">
+        <i class="header__icon icon icon-circle live-blink"></i>
+        <h2 class="header__title">En vivo</h2>
+      </div>
+
+      <div class="preview__list-wrapper">
+        <ul class="preview__list">
+        </ul>
+      </div>
+    </div>
+
+    <div class="preview--closed-videos hide">
+      <div class="preview__floating-header">
+        <i class="header__icon icon icon-play"></i>
+        <h2 class="header__title">Audiencias ya acontecidas</h2>
+      </div>
+
+      <div class="preview__list-wrapper">
+        <ul class="preview__list">
+        </ul>
+      </div>
+
+      <div class="preview__show-all">
+        <a href="{% url 'video_list' %}" class="show-all__button">Ver todo</a>
+      </div>
+    </div>
+
+
+    <div class="preview--calendar">
+      <div class="preview__floating-header">
+        <i class="header__icon icon icon-calendar"></i>
+        <h2 class="header__title">Audiencias públicas</h2>
+      </div>
+
+      <table class="calendar-table">
+        <tbody class="calendar-table__body">
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
