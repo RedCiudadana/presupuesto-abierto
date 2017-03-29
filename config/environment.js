@@ -20,6 +20,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      spreadsheetUrl: 'https://docs.google.com/spreadsheets/d/1khebSGsiGHoQYZGcK6BpFS-F8mB2Mx4tlB90dirS0ws/pubhtml',
+      staticFilesUrl: null
     }
   };
 
