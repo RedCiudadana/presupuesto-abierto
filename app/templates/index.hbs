@@ -7,9 +7,6 @@
   </section>
 
   <section class="section-bottom">
-
-    Sup
-
     <div class="preview--live-videos hide">
       <div class="preview__floating-header">
         <i class="header__icon icon icon-circle live-blink"></i>
@@ -21,6 +18,10 @@
         </ul>
       </div>
     </div>
+
+    {{#each model as |audiencia|}}
+      audiencia: {{audiencia.nombre}} <br />
+    {{/each}}
 
     <div class="preview--closed-videos hide">
       <div class="preview__floating-header">

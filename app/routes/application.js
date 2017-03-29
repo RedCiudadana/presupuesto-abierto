@@ -1,12 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  spreadsheet: Ember.inject.service(),
-
   model() {
-    const spreadsheet = this.get('spreadsheets');
-
-    return spreadsheet.fetch('audiencias')
+    return this.store.findAll('audiencia');
   },
 
   setupController(controller, model) {
