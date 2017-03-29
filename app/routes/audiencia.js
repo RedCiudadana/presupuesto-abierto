@@ -20,12 +20,8 @@ export default Ember.Route.extend(AutoReload, {
 
   didAutoReload(attributesChanged, newSnapshot, oldSnapshot) {
     if (!attributesChanged) {
-      console.log('Nothing happened');
-
       return;
     }
-
-    console.log('Got a change!');
 
     newSnapshot.attributes().forEach((item) => {
       if (!oldSnapshot.attributes().findBy('id', item.id)) {
@@ -35,8 +31,6 @@ export default Ember.Route.extend(AutoReload, {
   },
 
   reload() {
-    console.log('Reloading');
-
     let audienciaId = this.get('audienciaId');
 
     // TODO: Avoid overwriting the whole object
@@ -50,8 +44,6 @@ export default Ember.Route.extend(AutoReload, {
   },
 
   _createSnapshot() {
-    console.log('Creating snapshot');
-
     return this.get('currentSnapshot');
   },
 
@@ -74,7 +66,11 @@ export default Ember.Route.extend(AutoReload, {
   setupController(controller, model) {
     this._super(controller, model);
 
-    this.startAutoReloading();
+    if (model.audiencia.get('getEnableQuestionStream')) {
+      console.log('Enabling question stream');
+
+      this.startAutoReloading();
+    }
   },
 
   willTransition() {
