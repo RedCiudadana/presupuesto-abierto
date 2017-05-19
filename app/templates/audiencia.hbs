@@ -3,66 +3,33 @@
     <div class="questions-wrapper">
       <div class="questions">
         <div class="questions__header">
-          <h1 class="header__title">Institución: {{ model.audiencia.nombre }}</h1>
+          <h1 class="header__title">{{ model.audiencia.nombre }}</h1>
           <p class="header__text">
             Sigue en vivo y comparte tus preguntas o comentarios.
           </p>
         </div>
 
-        <ul class="questions__list" id="questions">
-          {{#each preguntasRespuestasOrdenadas as |preguntaRespuesta|}}
-            <li
-              class="list__item"
-              id="{{preguntaRespuesta.id}}"
-            >
-              <div class="item__question-block">
-
-                <ul class="question-block__share-list">
-                  <li class="share-list__item--facebook ">
-                    <a class="item__link" data-social="facebook" target="_blank" title="Compartir en Facebook">
-                      <i class="item__icon icon icon-facebook"></i>
-                    </a>
-                  </li>
-
-                  <li class="share-list__item--twitter ">
-                    <a class="item__link" data-social="twitter" target="_blank" title="Compartir en Twitter">
-                      <i class="item__icon icon icon-twitter"></i>
-                    </a>
-                  </li>
-
-                  <li class="share-list__item--whatsapp ">
-                    <a class="item__link" data-social="whatsapp" target="_blank" title="Compartilhar pelo Whatsapp">
-                      <i class="item__icon icon icon-whatsapp"></i>
-                    </a>
-                  </li>
-
-                  <span class="share-list__close" role="button" title="Cancelar">
-                    <i class="icon icon-times"></i>
-                  </span>
-                </ul>
-
-                <p class="question-block__text">{{preguntaRespuesta.preguntaRespuesta}}</p>
-
-                <div class="question-block__info">
-                  <span class="info__username">{{preguntaRespuesta.author}}</span>
-                </div>
-              </div>
-            </li>
-          {{else}}
-            <div class="questions__list--empty">
-              <img src="/img/question-hand.svg">
-              <p>No hay preguntas registradas</p>
-            </div>
-          {{/each}}
-        </ul>
-        {{!-- <div class="questions__read-more"></div> --}}
-
-        {{!-- <div class="send-form--closed">
-          <span>Audiencia cerrada para participantes</span>
-        </div> --}}
+        <div class="questions__list" id="questions" style="text-align: center;">
+          <iframe
+            src={{model.audiencia.slideshareUrl}}
+            {{!-- width="595"
+            height="485" --}}
+            width="500"
+            height="335"
+            frameborder="0"
+            marginwidth="0"
+            marginheight="0"
+            scrolling="no"
+            style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
+
+  Documentos length: {{model.documentos.length}}
 
   <section class="section-right">
     <div class="section-right__top">

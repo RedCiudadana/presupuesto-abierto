@@ -59,6 +59,11 @@ export default Ember.Route.extend(AutoReload, {
         .fetch(`audiencia-${params.id}`)
         .then((result) => {
           return Ember.A(result);
+        }),
+      documentos: spreadsheet
+        .fetch('audiencia-documento')
+        .then((result) => {
+          return result.filterBy('audiencia', audiencia.get('id'))
         })
     });
   },
