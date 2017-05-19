@@ -11,6 +11,7 @@
 $color-footer: #ffffff;
 $color-primary: #f6f6f6;
 $color-primary-xlight: #dff3fe;
+$color-accent: #0a79bf;
 
 // Base
 @import 'base/globals';
@@ -48,4 +49,26 @@ $color-primary-xlight: #dff3fe;
   .logo__image--audiencias-text {
     margin-left: 0em;
   }
+}
+
+.questions__header {
+  .header__title {
+    color: #0e4c73;
+
+    &::after {
+      background-color: $color-accent;
+    }
+  }
+
+  .header__text {
+    color: #0e4c73;
+  }
+}
+
+.video {
+  background-color: $color-accent;
+}
+
+.chat {
+  background-color: #e6e6e6;
 }
