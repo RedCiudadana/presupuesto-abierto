@@ -7,6 +7,11 @@
 @import 'ambience/colors';
 @import 'ambience/fonts';
 
+// Customizations
+$color-footer: #ffffff;
+$color-primary: #f6f6f6;
+$color-primary-xlight: #dff3fe;
+
 // Base
 @import 'base/globals';
 
@@ -34,3 +39,13 @@
 @import 'components/tabs-nav';
 @import 'components/video';
 
+// Customizations
+.banner__text {
+  color: #0e4c73;
+}
+
+.navigation {
+  .logo__image--audiencias-text {
+    margin-left: 0em;
+  }
+}
