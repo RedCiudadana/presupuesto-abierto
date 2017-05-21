@@ -2220,7 +2220,7 @@ ember-cli-htmlbars@0.7.6:
     broccoli-filter "^0.1.6"
     ember-cli-version-checker "^1.0.2"
 
-ember-cli-htmlbars@^1.0.0, ember-cli-htmlbars@^1.0.2, ember-cli-htmlbars@^1.0.3, ember-cli-htmlbars@^1.1.1:
+ember-cli-htmlbars@^1.0.0, ember-cli-htmlbars@^1.0.11, ember-cli-htmlbars@^1.0.2, ember-cli-htmlbars@^1.0.3, ember-cli-htmlbars@^1.1.1:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-1.3.3.tgz#06815262c1577736235bd42ce99db559ce5ebfd1"
   dependencies:
@@ -2320,6 +2320,13 @@ ember-cli-shims@^1.1.0:
     ember-cli-version-checker "^1.2.0"
     silent-error "^1.0.1"
 
+ember-cli-spinner@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/ember-cli-spinner/-/ember-cli-spinner-0.0.9.tgz#83ae3fa02c2a79c046e5c5e349e7ddb963aea261"
+  dependencies:
+    ember-cli-babel "^5.1.3"
+    ember-cli-htmlbars "^1.0.11"
+
 ember-cli-sri@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ember-cli-sri/-/ember-cli-sri-2.1.1.tgz#971620934a4b9183cf7923cc03e178b83aa907fd"
@@ -2341,6 +2348,13 @@ ember-cli-test-loader@^2.0.0:
   resolved "https://registry.yarnpkg.com/ember-cli-test-loader/-/ember-cli-test-loader-2.1.0.tgz#16163bae0ac32cad1af13c4ed94c6c698b54d431"
   dependencies:
     ember-cli-babel "^6.0.0-beta.7"
+
+ember-cli-twitter-feed@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-twitter-feed/-/ember-cli-twitter-feed-0.1.0.tgz#29b38c26d25367e6c4401e35636741dcbbe93eb6"
+  dependencies:
+    ember-cli-babel "^5.1.3"
+    ember-cli-htmlbars "^1.0.0"
 
 ember-cli-uglify@^1.2.0:
   version "1.2.0"
