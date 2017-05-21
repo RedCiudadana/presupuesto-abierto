@@ -8,5 +8,7 @@ export default DS.Model.extend({
   thumbMedium: DS.attr(),
   enableQuestionStream: DS.attr('number'),
   getEnableQuestionStream: Ember.computed.bool('enableQuestionStream'),
-  slideshareUrl: DS.attr()
+  slideshareUrl: DS.attr(),
+  twitterHashtag: DS.attr(),
+  twitterTimelineTag: DS.attr()
 });

@@ -48,6 +48,19 @@
 
     <div class="section-right__bottom">
       <div class="chat">
+        {{#twitter-feed}}
+          {{#if model.audiencia.twitterTimelineTag}}
+            {{{model.audiencia.twitterTimelineTag}}}
+          {{else}}
+            <a class="twitter-timeline"
+              href="https://twitter.com/hashtag/{{model.audiencia.twitterHashtag}}"
+              data-widget-id="639895199179767808"
+            >
+              #{{model.audiencia.twitterHashtag}} Tweets
+            </a>
+          {{/if}}
+        {{/twitter-feed}}
+
         {{!-- <div class="chat__floating-header">
           <i class="header__icon icon icon-comments"></i>
           <h3 class="header__title">Bate-Papo</h3>
