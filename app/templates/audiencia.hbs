@@ -4,16 +4,15 @@
       <div class="questions">
         <div class="questions__header">
 
-          <div class="row text-right">
-            <div class="column small-8"></div>
+          <div class="row">
             {{facebook-share
               fb-layout='button_count'
-              classNames='column small-2 small-offset-8'
+              classNames='column small-2 small-offset-8 text-right'
             }}
             {{twitter-share
               count='horizontal'
               hashtags=model.audiencia.twitterHashtag
-              classNames='column small-2 twitter-share-container'
+              classNames='column small-2 twitter-share-container text-left'
             }}
           </div>
 
