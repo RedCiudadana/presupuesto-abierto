@@ -87,7 +87,8 @@
   }
 
   @include breakpoint(xlarge up) {
-    height: 100%;
+    // Red Ciudadana: Customized
+    // height: 100%;
   }
 
   @include breakpoint(xxlarge up) {
