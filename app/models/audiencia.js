@@ -11,5 +11,6 @@ export default DS.Model.extend({
   slideshareUrl: DS.attr(),
   twitterHashtag: DS.attr(),
   twitterTimelineTag: DS.attr(),
-  facebookCommentsUrl: DS.attr()
+  facebookCommentsUrl: DS.attr(),
+  visible: DS.attr('boolean')
 });

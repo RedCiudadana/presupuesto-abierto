@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   // },
 
   model() {
-    return this.store.findAll('audiencia');
+    return this.store.findAll('audiencia').then((result) => result.filterBy('visible', true));
   },
 
   setupController(controller, model) {
