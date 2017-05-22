@@ -1,8 +1,8 @@
 <main class="home">
   <section class="section-top">
     <div class="banner">
-      <img class="banner__logo" src="/img/front-banner.jpg">
-      <p class="banner__text">¡Acompaña en vivo, participa enviando tus preguntas y comentarios!</p>
+      <img class="banner__logo" src="/img/front-banner.jpg" style="width: 100%;">
+      {{!-- <p class="banner__text">¡Acompaña en vivo, participa enviando tus preguntas y comentarios!</p> --}}
     </div>
   </section>
 
@@ -28,7 +28,7 @@
       <div class="preview__list-wrapper">
         <ul class="preview__list">
           {{#each model as |audiencia|}}
-            <li class="list__video">
+            <li class="list__video text-center">
               {{#if audiencia.thumbMedium}}
                 {{#link-to 'audiencia' audiencia.id class="video__link"}}
                   <img class="video__thumbnail" src="{{audiencia.thumbMedium}}">
