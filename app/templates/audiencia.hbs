@@ -3,7 +3,17 @@
     <div class="questions-wrapper">
       <div class="questions">
         <div class="questions__header">
-          <h1 class="header__title">{{ model.audiencia.nombre }}</h1>
+
+          <div class="text-right">
+            <div>
+              {{facebook-like fb-action='recommend' fb-show-faces=false fb-share=false fb-layout='button_count'}}
+            </div>
+            <div>
+              {{twitter-share count='horizontal' hashtags=model.audiencia.twitterHashtag}}
+            </div>
+          </div>
+
+          <h1 class="header__title">{{model.audiencia.nombre}}</h1>
           <p class="header__text">
             Sigue en vivo y comparte tus preguntas o comentarios.
           </p>
