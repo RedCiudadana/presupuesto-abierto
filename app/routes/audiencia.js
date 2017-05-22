@@ -55,11 +55,6 @@ export default Ember.Route.extend(AutoReload, {
 
     return Ember.RSVP.hash({
       audiencia: audiencia,
-      preguntasRespuestas: spreadsheet
-        .fetch(`audiencia-${params.id}`)
-        .then((result) => {
-          return Ember.A(result);
-        }),
       documentos: spreadsheet
         .fetch('audiencia-documento')
         .then((result) => {

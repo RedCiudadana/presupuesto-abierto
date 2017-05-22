@@ -10,5 +10,6 @@ export default DS.Model.extend({
   getEnableQuestionStream: Ember.computed.bool('enableQuestionStream'),
   slideshareUrl: DS.attr(),
   twitterHashtag: DS.attr(),
-  twitterTimelineTag: DS.attr()
+  twitterTimelineTag: DS.attr(),
+  facebookCommentsUrl: DS.attr()
 });

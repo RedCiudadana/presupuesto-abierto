@@ -78,7 +78,8 @@
   }
 
   @include breakpoint(large only) {
-    padding-bottom: 80px;
+    // Red Ciudadana: Customized
+    // padding-bottom: 80px;
   }
 
   @include breakpoint(large up) {

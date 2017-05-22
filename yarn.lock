@@ -2164,6 +2164,13 @@ ember-cli-eslint@^3.0.0:
     rsvp "^3.2.1"
     walk-sync "^0.3.0"
 
+ember-cli-facebook-js-sdk@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/ember-cli-facebook-js-sdk/-/ember-cli-facebook-js-sdk-1.0.8.tgz#03e852842726653b1804dd85accb73e21c212d1f"
+  dependencies:
+    ember-cli-babel "^5.1.5"
+    ember-getowner-polyfill "^1.2.2"
+
 ember-cli-flash@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/ember-cli-flash/-/ember-cli-flash-1.4.2.tgz#db5c5b481a078cae95b3336ac08a46afd2517fd1"
@@ -2533,7 +2540,7 @@ ember-factory-for-polyfill@^1.1.0:
     ember-cli-babel "^5.1.7"
     ember-cli-version-checker "^1.2.0"
 
-ember-getowner-polyfill@^1.1.0:
+ember-getowner-polyfill@^1.1.0, ember-getowner-polyfill@^1.2.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-1.2.3.tgz#ea70f4a48b1c05b91056371d1878bbafe018222e"
   dependencies:

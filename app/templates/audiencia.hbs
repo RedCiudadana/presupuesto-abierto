@@ -25,6 +25,15 @@
           >
           </iframe>
         </div>
+
+        <div>
+          <div
+            class="fb-comments"
+            data-href="{{model.audiencia.facebookCommentsUrl}}"
+            data-width="645"
+            data-numposts="10"
+          ></div>
+        </div>
       </div>
     </div>
   </section>
@@ -54,56 +63,12 @@
           {{else}}
             <a class="twitter-timeline"
               href="https://twitter.com/hashtag/{{model.audiencia.twitterHashtag}}"
-              data-widget-id="639895199179767808"
+              data-widget-id="sup"
             >
               #{{model.audiencia.twitterHashtag}} Tweets
             </a>
           {{/if}}
         {{/twitter-feed}}
-
-        {{!-- <div class="chat__floating-header">
-          <i class="header__icon icon icon-comments"></i>
-          <h3 class="header__title">Bate-Papo</h3>
-        </div>
-
-        <div class="chat__messages">
-          <ul class="messages__list" id="chat">
-            {% if object.messages.all %}
-              {% for message in object.messages.all %}
-                {% include "includes/chat_message.html" with message=message %}
-              {% endfor %}
-            {% elif not object.closed_date %}
-              <div class="messages__list--empty">
-                <img src="{% static 'img/chat-bubble.svg' %}" data-fallback="{% static 'img/chat-bubble.png' %}">
-                <p>Nenhuma mensagem foi enviada ainda. Seja o primeiro!</p>
-              </div>
-            {% endif %}
-          </ul>
-        </div>
-        <div class="chat__read-more">Há novas mensagens disponíveis abaixo</div>
-
-        {% if not object.closed_date and user.is_authenticated %}
-          <form class="send-form--chat" id="chatform">
-            <textarea class="send-form__input" id="message" name="message" placeholder="Envie uma mensagem" autocomplete="off" required></textarea>
-            <div class="send-form__actions">
-              <button class="actions__button" id="go">
-                <span class="button__text">Enviar</span>
-                <i class="button__icon icon icon-caret-right"></i>
-              </button>
-            </div>
-          </form>
-
-        {% elif not object.closed_date and not user.is_authenticated %}
-          <div class="send-form--unauthenticated">
-            <span><a href="{% url 'login' %}">Faça Login</a> para participar no chat!</span>
-          </div>
-
-        {% elif object.closed_date %}
-          <div class="send-form--closed">
-            <span>Audiência encerrada para participações.</span>
-          </div>
-
-        {% endif %} --}}
       </div>
     </div>
   </section>

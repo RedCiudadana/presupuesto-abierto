@@ -17,6 +17,12 @@ module.exports = function(environment) {
       }
     },
 
+    FB: {
+      appId: '134794956606359',
+      version: 'v2.9',
+      xfbml: true
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

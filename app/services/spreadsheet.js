@@ -5,6 +5,7 @@ import {isNotFoundError} from 'ember-ajax/errors';
 
 export default Ember.Service.extend({
   ajax: Ember.inject.service(),
+
   flashMessages: Ember.inject.service(),
 
   fetch(worksheet) {
@@ -32,7 +33,7 @@ export default Ember.Service.extend({
         });
     }
 
-    return new Ember.RSVP.Promise((resolve) => {
+    return new Ember.RSVP.Promise((resolve, reject) => {
       Tabletop.init({
         key: config.APP.spreadsheetUrl,
         callback: (data) => {
@@ -40,14 +41,14 @@ export default Ember.Service.extend({
             let errorMessage = `Got no answer for spreadsheet ${worksheet}`;
             this.get('flashMessages').danger(errorMessage, {sticky: true});
 
-            throw new Error(errorMessage);
+            return reject(errorMessage);
           }
 
           if (Ember.isNone(data[worksheet].elements)) {
             let errorMessage = `Got a problem with the elements for spreadsheet ${worksheet}`;
             this.get('flashMessages').danger(errorMessage, {sticky: true});
 
-            throw new Error(errorMessage);
+            return reject(errorMessage);
           }
 
           resolve(data[worksheet].elements);
