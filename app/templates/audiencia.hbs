@@ -4,13 +4,20 @@
       <div class="questions">
         <div class="questions__header">
 
-          <div class="text-right">
-            <div>
-              {{facebook-like fb-action='recommend' fb-show-faces=false fb-share=false fb-layout='button_count'}}
-            </div>
-            <div>
-              {{twitter-share count='horizontal' hashtags=model.audiencia.twitterHashtag}}
-            </div>
+          <div class="row text-right">
+            <div class="column small-8"></div>
+            {{facebook-like
+              fb-action='recommend'
+              fb-show-faces=false
+              fb-share=false
+              fb-layout='button_count'
+              classNames='column small-2 small-offset-8'
+            }}
+            {{twitter-share
+              count='horizontal'
+              hashtags=model.audiencia.twitterHashtag
+              classNames='column small-2 twitter-share-container'
+            }}
           </div>
 
           <h1 class="header__title">{{model.audiencia.nombre}}</h1>
@@ -36,19 +43,20 @@
           </iframe>
         </div>
 
-        <div>
+        {{!-- TODO: Pendiente de completar --}}
+        {{!-- <div>
           <div
             class="fb-comments"
             data-href="{{model.audiencia.facebookCommentsUrl}}"
             data-width="645"
             data-numposts="10"
           ></div>
-        </div>
+        </div> --}}
+
+        {{!-- Documentos length: {{model.documentos.length}} --}}
       </div>
     </div>
   </section>
-
-  {{!-- Documentos length: {{model.documentos.length}} --}}
 
   <section class="section-right">
     <div class="section-right__top">
