@@ -26,7 +26,7 @@
           </p>
         </div>
 
-        <div class="questions__list" id="questions" style="text-align: center;">
+        <div class="questions__list text-center" id="questions">
           <iframe
             src={{model.audiencia.slideshareUrl}}
             {{!-- width="595"
@@ -43,6 +43,14 @@
           </iframe>
         </div>
 
+        <div class="questions__list text-center" style="margin: 0em;">
+          {{#each model.documentos as |documento|}}
+            <a class="button {{documento.cssClasses}}" href="{{documento.url}}" target="_blank">
+              {{documento.titulo}}
+            </a>
+          {{/each}}
+        </div>
+
         {{!-- TODO: Pendiente de completar --}}
         {{!-- <div>
           <div
@@ -52,8 +60,6 @@
             data-numposts="10"
           ></div>
         </div> --}}
-
-        {{!-- Documentos length: {{model.documentos.length}} --}}
       </div>
     </div>
   </section>
