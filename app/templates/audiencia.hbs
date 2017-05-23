@@ -63,13 +63,17 @@
     <div class="section-right__top">
       <div class="video">
         <div class="video__iframe-wrapper">
-          {{!-- {{ember-youtube ytid=model.audiencia.youtubeId playerVars=(hash autoplay=0)}} --}}
-          <div class="fb-video" data-href="https://www.facebook.com/minfingt/videos/1649515321744163/" data-width="500" data-show-text="false">
-            <blockquote cite="https://www.facebook.com/minfingt/videos/1649515321744163/" class="fb-xfbml-parse-ignore">
-              <a href="https://www.facebook.com/minfingt/videos/1649515321744163/"></a>
-              <p></p>Publicado por <a href="https://www.facebook.com/minfingt/">Gobierno de Guatemala</a> on lunes, 22 de mayo de 2017
-            </blockquote>
-          </div>
+          {{#if model.audiencia.youtubeId}}
+            {{ember-youtube ytid=model.audiencia.youtubeId playerVars=(hash autoplay=0)}}
+          {{/if}}
+
+          {{#if model.audiencia.facebookVideoUrl}}
+            <div class="fb-video" data-href="{{model.audiencia.facebookVideoUrl}}" data-width="500" data-show-text="false">
+              <blockquote cite="{{model.audiencia.facebookVideoUrl}}" class="fb-xfbml-parse-ignore">
+                <a href="{{model.audiencia.facebookVideoUrl}}"></a>
+              </blockquote>
+            </div>
+          {{/if}}
         </div>
 
         <div class="video__title text-center">
