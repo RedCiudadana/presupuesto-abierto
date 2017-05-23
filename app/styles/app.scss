@@ -94,6 +94,8 @@ $color-accent: #0a79bf;
 }
 
 
-.video-list {
-  background-color: white;
+.preview__list {
+  .video__thumbnail {
+    background: white;
+  }
 }
