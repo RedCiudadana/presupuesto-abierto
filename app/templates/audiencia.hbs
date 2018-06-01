@@ -86,7 +86,8 @@
 
     <div class="section-right__bottom">
       <div class="chat">
-        {{#twitter-feed}}
+        {{{model.audiencia.twitterTimelineTag}}}
+        {{!-- {{#twitter-feed}}
           {{#if model.audiencia.twitterTimelineTag}}
             {{{model.audiencia.twitterTimelineTag}}}
           {{else}}
@@ -97,7 +98,7 @@
               #{{model.audiencia.twitterHashtag}} Tweets
             </a>
           {{/if}}
-        {{/twitter-feed}}
+        {{/twitter-feed}} --}}
       </div>
     </div>
   </section>

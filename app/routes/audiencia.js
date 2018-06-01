@@ -69,11 +69,11 @@ export default Ember.Route.extend(AutoReload, {
     if (model.audiencia.get('getEnableQuestionStream')) {
       console.log('Enabling question stream');
 
-      this.startAutoReloading();
+      // this.startAutoReloading();
     }
   },
 
   willTransition() {
-    this.stopAutoReloading();
+    // this.stopAutoReloading();
   }
 });
